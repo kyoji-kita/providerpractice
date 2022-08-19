@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:providerpractice/provider/provider.dart';
+import 'package:provider/provider.dart';
 import 'package:providerpractice/view/index_page.dart';
 
 import '../repositry/auth_repositry.dart';
@@ -9,7 +9,7 @@ import 'login_model.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
+    return ChangeNotifierProvider<LoginModel>(
       create: (context) => LoginModel(
         AuthRepository(),
       ),
